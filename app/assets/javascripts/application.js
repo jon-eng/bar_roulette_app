@@ -29,3 +29,9 @@ var App = {
 	Views: {}, 
 	Routers: {}
 };
+
+$(function(){
+var collection = new App.Collections.Bars;
+var barsView = new App.Views.Bars({collection: collection })
+
+});
