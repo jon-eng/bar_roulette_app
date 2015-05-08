@@ -9,16 +9,21 @@ class Bar
   V = "20150401"
 
 
-  def self.find_bar()
-    bar_data = HTTParty.get("https://api.foursquare.com/v2/venues/explore", :query =>{:near => "520 12th St New York, NY", :client_id => "BNAPSUX5Q2VGUM2JOAQGHXHGCK5WGGHWQPF2VWKZJG5XLKUL", :client_secret => "F4OSS11HXEOPZP41WPYYXDSV2NHR2BYZGZWNX44OJ3PEBLZ0", :v => "20150401", :section => "drinks", :limit => "200", :radius => "15000", :price => "2"})
+  def self.find_bar(near, distance, bar_price)
+    
+    bar_data = HTTParty.get(BASE_URL, :query =>{:near => near, :client_id => CLIENT_ID, :client_secret => CLIENT_SECRET, :v => V, :section => "drinks", :limit => "200", :radius => distance, :price => bar_price})
 
     random_bar = bar_data["response"]["groups"][0]["items"].sample
+
+    random_bar
 
     # price = random_bar["venue"]["price"]["tier"]
     # lat = random_bar["venue"]["location"]["lat"]
     # lng = random_bar["venue"]["location"]["lng"]
 
-    random_bar
+    # response = price + lat + lng
+
+    # response
   end
 
 
