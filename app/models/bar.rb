@@ -1,4 +1,4 @@
-class Bar
+class Bar < ActiveRecord::Base
   
   BASE_URL = "https://api.foursquare.com/v2/venues/explore"
 
@@ -9,13 +9,15 @@ class Bar
   V = "20150401"
 
 
-  def self.find_bar(near, distance, bar_price)
-    
-    bar_data = HTTParty.get(BASE_URL, :query =>{:near => near, :client_id => CLIENT_ID, :client_secret => CLIENT_SECRET, :v => V, :section => "drinks", :limit => "200", :radius => distance, :price => bar_price})
+  def self.find_bar(query)
+    bar_data = HTTParty.get(URI.escape([BASE_URL, "?near=", query[0], '&client_id=', CLIENT_ID, '&client_secret=', CLIENT_SECRET, '&v=', V, '&section=drinks&limit=200&radius=', query[1], '&price=', query[2], '&venuePhotos=1'].join('')))
+
+
 
     random_bar = bar_data["response"]["groups"][0]["items"].sample
 
     random_bar
+
 
     # price = random_bar["venue"]["price"]["tier"]
     # lat = random_bar["venue"]["location"]["lat"]

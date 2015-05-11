@@ -2,33 +2,42 @@ App.Views.Bars = Backbone.View.extend({
 
   el: '#bars-container',
 
-  initialize: function(){
+  initialize: function() {
     this.listenTo(this.collection, 'reset', this.renderAll);
     this.listenTo(this.collection, 'add', this.render);
 
   },
 
-  renderAll: function(){
+  renderAll: function() {
     this.$('#display').empty();
     this.collection.each(this.render, this)
   },
 
-  render: function(bar){
-    this.$('#display').append(new App.Views.bar({ model: bar }).$el)
+  render: function(bar) {
+    this.$('#display').append(new App.Views.Bar({ model: bar }).$el)
   },
 
   events: {
-    'click #search' : 'searchForBar'
+    'click #search': 'searchForBar'
   },
 
-  searchForBar: function(){
+  searchForBar: function() {
 
+    var near = this.$('#near').val();
+    var distanceConverted = this.$('#distance').val();
+    var bar_price = (this.$('#bar_price').val());
+      
+    var distance = distanceConverted * 1609.34;
 
-    console.log(this.collection)
+    var query = [near, distance, bar_price];
 
-  var near = this.$('#near').val();
-  var distance = this.$('#distance').val();
-  var bar_price = this.$('#bar_price').val();
-  this.collection.search(near, distance, bar_price)
+    this.collection.fetch({
+      data: {
+        query: query
+      },
+      reset: true
+    })
+
+    // console.log(this.collection)
   }
 })
