@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root 'application#index'
 
-  get 'venues/explore' => 'bars#search'
+  get 'bars/search' => 'bars#search'
+  get 'ubers/search' => 'ubers#search'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
