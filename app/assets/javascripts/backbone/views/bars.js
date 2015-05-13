@@ -42,6 +42,7 @@ App.Views.Bars = Backbone.View.extend({
     })
     
     this.$('#uber-display').empty();
+    $('#map').empty().removeAttr('style');
     // console.log(this.collection)
   }
 })
