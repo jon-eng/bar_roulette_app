@@ -51,5 +51,8 @@ end
 gem 'oauth2'
 gem 'backbars'
 
+
 gem 'rails-assets-underscore', source: 'https://rails-assets.org'
 gem 'rails-assets-backbone', source: 'https://rails-assets.org'
+
+gem 'rails_12factor', group: :production
