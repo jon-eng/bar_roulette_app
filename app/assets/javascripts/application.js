@@ -31,7 +31,10 @@ var App = {
 };
 
 $(function(){
-var collection = new App.Collections.Bars;
-var barsView = new App.Views.Bars({collection: collection })
+var barCollection = new App.Collections.Bars;
+var barsView = new App.Views.Bars({collection: barCollection })
+
+App.uberCollection = new App.Collections.Ubers;
+App.ubersView = new App.Views.Ubers({collection: App.uberCollection })
 
 });

@@ -13,3 +13,160 @@
  *= require_tree .
  *= require_self
  */
+
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
+
+#nav-bar{
+  background-color:rgba(0,0,0,0.3);
+  width:100%;
+  top:0;
+  left:0;
+  position:absolute;
+}
+
+h1{
+  width:900px;
+  margin-left: 200px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  font-size: 50px;
+  color:#1FBAD6;
+
+}
+
+.bar-box {
+
+}
+.uber-box{
+  margin-top:20px;
+  margin-bottom:20px;
+  padding:20px;
+  text-align: center;
+  list-style-type: none;
+  width: 85px;
+  float:left;
+  background-color:rgba(0,0,0,0.3);
+
+
+}
+
+#uber-display{
+  margin-top:150px;
+}
+
+#bars-container{
+  position:relative;
+/*  text-align: center;*/
+  margin: 150px auto;
+}
+
+input#near{
+  margin-top: 10px;
+  width: 200px;
+  height: 25px;
+}
+input#distance{
+  margin-top: 10px;
+  width: 200px;
+  height: 25px;
+}
+input#bar_price{
+  margin-top: 10px;
+  width: 200px;
+  height: 25px;
+}
+
+#uber-display{
+
+  text-align: center;
+
+}
+
+#display{
+  margin-left: 60px;
+}
+
+#uber-container {
+
+  width: 100%;
+
+}
+
+#results{
+  width: 900px;
+  margin: 150px auto;
+}
+
+img{
+  margin-top:-200px;
+  float:right;
+  margin-right: 60px;
+  border: solid 1px white;
+  border-radius: 3px;
+}
+
+body {
+/*  background: #27231F;*/
+background: url("http://i.imgur.com/RzpMdF0.jpg?1") no-repeat center center fixed;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  margin: 0 auto;
+}
+
+.form-container {
+  width: 33%;
+  display: inline-block;
+  text-align: center;
+  margin:auto;
+}
+
+.prompt {
+  width: 100%;
+  margin-bottom: 5px; 
+}
+
+.input {
+  width: 100%;
+}
+
+#input-container{
+  text-align: center;
+}
+
+button#search{
+
+  margin-top: 40px;
+  margin-bottom:30px;
+}
+
+button{
+  border: solid 1px #1FBAD6;
+  margin-top: 10px;
+  margin-left: 5px;
+  height: 28px;
+  width:100px;
+  color: white;
+  background-color: #1FBAD6;
+
+}
+
+button:hover{
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+
+li.uber-car{
+  color:#1FBAD6;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+li.uber-price{
+  color:white;
+}
+
+hr{
+  margin-bottom:80px;
+}

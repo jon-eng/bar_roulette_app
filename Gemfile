@@ -45,8 +45,10 @@ group :development, :test do
   gem 'spring'
   gem 'yelp', require: 'yelp'
   gem 'pry-rails'
-  gem 'oauth2'
+  
 end
+
+gem 'oauth2'
 gem 'backbars'
 
 gem 'rails-assets-underscore', source: 'https://rails-assets.org'

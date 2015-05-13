@@ -8,13 +8,41 @@
 </head>
 <body>
 
-<div id='bars-container'>
-  <input type="text" id='near' placeholder='Starting Location'>
-  <input type="text" id='distance' placeholder='Max Distance'>
-  <input type="text" id='bar_price' placeholder='Bar Price'>
-  <button id='search'>Spin to Win</button>
-  <section id='display'></section>
+<div id = "nav-bar">
+  <h1>Bar Roulette</h1>
 </div>
 
+<div id = 'results'>
+  <div id='bars-container'>
+    <div id='input-container'>
+      
+      <div class="form-container">
+        <p class="prompt">Starting Location</p>
+        <input class="input" type="text" id='near' placeholder='Enter Address'>
+      </div>
+
+      <div class="form-container">
+        <p class="prompt">How Far Are You Willing to Go?</p>
+        <input class="input" type="text" id='distance' placeholder='Enter Miles'>
+      </div>
+
+      <div class="form-container">
+        <p class="prompt">How Many Stacks Are You Willing to Drop?</p>
+        <input class="input" type="text" id='bar_price' placeholder='Enter Numbers 1-4'>
+      </div>
+      
+      <button id='search'>Spin to Win</button>
+      
+      <hr>
+
+    </div>
+    <section id='display'></section>
+      <div id = 'uber-container'>
+       <section id='uber-display'></section>
+      </div>
+  </div>
+
+
+</div>
 </body>
 </html>

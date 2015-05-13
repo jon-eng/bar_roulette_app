@@ -10,6 +10,7 @@ App.Views.Bars = Backbone.View.extend({
 
   renderAll: function() {
     this.$('#display').empty();
+
     this.collection.each(this.render, this)
   },
 
@@ -31,13 +32,16 @@ App.Views.Bars = Backbone.View.extend({
 
     var query = [near, distance, bar_price];
 
+
+
     this.collection.fetch({
       data: {
         query: query
       },
       reset: true
     })
-
+    
+    this.$('#uber-display').empty();
     // console.log(this.collection)
   }
 })
