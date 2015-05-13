@@ -17,7 +17,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
 
 #nav-bar{
-  background-color:rgba(0,0,0,0.3);
+  background-color:rgba(0,0,0,0.8);
   width:100%;
   top:0;
   left:0;
@@ -39,8 +39,8 @@ h1{
 }
 .uber-box{
   margin-top:20px;
-  margin-bottom:20px;
-  padding:20px;
+  margin-bottom:30px;
+  padding-right: 35px;
   text-align: center;
   list-style-type: none;
   width: 85px;
@@ -48,6 +48,14 @@ h1{
   background-color:rgba(0,0,0,0.3);
 
 
+}
+
+:focus {
+  outline: none;
+}
+
+.input { 
+  text-align: center; 
 }
 
 #uber-display{
@@ -102,12 +110,12 @@ img{
   float:right;
   margin-right: 60px;
   border: solid 1px white;
-  border-radius: 3px;
+  border-radius: 7px;
 }
 
 body {
 /*  background: #27231F;*/
-background: url("http://i.imgur.com/RzpMdF0.jpg?1") no-repeat center center fixed;
+  background: url("http://i.imgur.com/RzpMdF0.jpg?1") no-repeat center center fixed;
   color: white;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
@@ -169,4 +177,11 @@ li.uber-price{
 
 hr{
   margin-bottom:80px;
+}
+
+#map{
+  margin-top:100px;
+  height: 600px;
+  width:100%;
+  margin-bottom:-500px;
 }
