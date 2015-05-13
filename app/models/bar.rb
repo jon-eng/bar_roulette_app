@@ -10,7 +10,7 @@ class Bar < ActiveRecord::Base
 
 
   def self.find_bar(query)
-    bar_data = HTTParty.get(URI.escape([BASE_URL, "?near=", query[0], '&client_id=', CLIENT_ID, '&client_secret=', CLIENT_SECRET, '&v=', V, '&section=drinks&limit=1&radius=', query[1], '&price=', query[2], '&venuePhotos=1'].join('')))
+    bar_data = HTTParty.get(URI.escape([BASE_URL, "?near=", query[0], '&client_id=', CLIENT_ID, '&client_secret=', CLIENT_SECRET, '&v=', V, '&section=drinks&limit=200&radius=', query[1], '&price=', query[2], '&venuePhotos=1'].join('')))
 
     start_lat = bar_data["response"]["geocode"]["center"]["lat"]
     start_lng = bar_data["response"]["geocode"]["center"]["lng"]

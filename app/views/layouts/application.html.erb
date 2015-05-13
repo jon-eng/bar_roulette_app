@@ -4,6 +4,7 @@
   <title>BarRouletteApp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'http://maps.googleapis.com/maps/api/js?v=3&sensor=false' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -27,7 +28,7 @@
       </div>
 
       <div class="form-container">
-        <p class="prompt">How Many Stacks Are You Willing to Drop?</p>
+        <p class="prompt">How Much Money Do You Want to Spend?</p>
         <input class="input" type="text" id='bar_price' placeholder='Enter Numbers 1-4'>
       </div>
       
@@ -37,12 +38,15 @@
 
     </div>
     <section id='display'></section>
+      
       <div id = 'uber-container'>
        <section id='uber-display'></section>
       </div>
+      
   </div>
 
 
 </div>
+<div id = 'map'></div>
 </body>
 </html>

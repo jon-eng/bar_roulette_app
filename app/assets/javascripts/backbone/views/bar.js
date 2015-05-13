@@ -36,6 +36,9 @@ App.Views.Bar = Backbone.View.extend({
 
     })
 
+    model = this.model.toJSON();
+    
+    var newMap = new App.Views.Map({ model: model})
     
   }
 
