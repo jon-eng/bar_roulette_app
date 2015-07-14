@@ -37,7 +37,7 @@ h1{
 }
 
 .bar-box {
-  margin-left:15%;
+  margin-left:25%;
 }
 .uber-box{
   margin-top:20px;
@@ -106,7 +106,7 @@ input#bar_price{
 img{
   margin-top:-200px;
   float:right;
-  margin-right: 20%;
+  margin-right: 34%;
   border: solid 1px white;
   border-radius: 7px;
 }
@@ -117,7 +117,7 @@ body {
   color: white;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  /*margin: 0 auto;*/
+  margin:-8px;
   background-size: cover;
 }
 
@@ -187,13 +187,12 @@ hr{
 #map{
   margin-top:100px;
   height: 600px;
-  width:110%;
+  width:100%;
   margin-bottom:-500px;
 }
 
 @media screen and (max-width:980px){
   .form-container{
-    background-color: orange;
     display:block;
     width:100%;
   }
