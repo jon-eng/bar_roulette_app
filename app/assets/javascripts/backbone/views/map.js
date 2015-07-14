@@ -5,6 +5,7 @@
   initialize: function() {
 
     this.$el.empty()
+    this.$el.css("display", "block")
     var MY_MAPTYPE_ID = 'custom_style';
     var featureOpts = [
       {
@@ -12,9 +13,6 @@
           { hue: "#000000"},
           { saturation: -100},
           { lightness: -70},
-          // { visibility: 'simplified' },
-          // { gamma: 0.5 },
-          // { weight: 0.5 }
         ]
       },
       {
@@ -81,8 +79,6 @@
           { weight: .2 }
         ]
       }
-
-
     ];
 
     var mapOptions = {

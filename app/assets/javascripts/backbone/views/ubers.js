@@ -6,7 +6,6 @@ App.Views.Ubers = Backbone.View.extend({
     this.listenTo(this.collection, 'reset', this.renderAll);
     this.listenTo(this.collection, 'add', this.render);
 
-    // this.renderAll();
 
   },
 
