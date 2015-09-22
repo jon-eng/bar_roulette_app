@@ -1,1 +1,3 @@
-App.Models.Bar = Backbone.Model.extend();
+App.Models.Bar = Backbone.Model.extend({
+  
+});

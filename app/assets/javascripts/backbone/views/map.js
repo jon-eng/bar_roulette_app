@@ -38,6 +38,15 @@
         ]
       },
       {
+        featureType: 'all',
+        elementType: 'labels.icon',
+        stylers: [
+            {
+                visibility: 'off'
+            }
+        ]
+    },
+      {
         featureType: 'poi',
         stylers: [
           { visibility: 'off' }
